@@ -10,11 +10,14 @@
             background-color: #0a0a0a;
             color: #ffffff;
             margin: 0;
+            margin-top: -10px;
             padding: 0;
         }
         header {
-            margin-top:-100px;
+            margin: 0;
             width: 100%;
+            height: 50px;
+            padding-top: 2%;
             background-color: #1a1a1a;
             position: fixed;
         }
@@ -42,22 +45,80 @@
             margin-top: 10px;
         }
         #accueil {
-            margin-top: 100px;
+            margin-top: 0px;
+            padding: 20px;
+            text-align: center;
+            display: flex;
         }
+        .text {
+            flex: 1;
+            margin-left: -200px;
+            padding-top: 10%;
+            margin-right: 100px;
+        }
+        .image {
+            flex: 1;
+            margin-left: 100px;
+            text-align: right;
+        }
+        img {
+            width: 500px;
+            height: 500px;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+
     </style>
 </head>
 <body>
     <header>
-        <div>
-            <h2><a href="#accueil">Portfolio</a></h2>
-            <a href="#about">À propos</a>
-            <a href="#projects">Projets</a>
-            <a href="#contact">Contact</a>
+        <div style="width: 100%;display: flex;">
+            <a href="#accueil" style="flex: 10;">Portfolio</a>
+            <a href="#about" style="flex: 1;">À propos</a>
+            <a href="#projects" style="flex: 1;">Projets</a>
+            <a href="#contact" style="flex: 1;">Contact</a>
         </div>
     </header>
     <div id="accueil">
-        <h3 class="name">Nomenjanahary Zo DIMBINDRAINY</h3>
-        <p>Site en cours de construction,...</p>
+        <div class="image">
+            <img src="FB_IMG_1642586526182__1_-removebg.png" alt="Photo de Zo">
+        </div>
+        <div class="text">
+            <h1>Bienvenue sur mon Portfolio</h1>
+            <p>👋 Bonjour et bienvenue !</p>
+            <p>Je suis <strong>Zo Nomenjanahary</strong>, développeur web passionné, administrateur système et expert en cybersécurité.</p>
+            <p>J’aide les entreprises et les particuliers à concevoir des solutions digitales performantes, sécurisées et modernes.</p>
+            <p>💡 <strong>Mes spécialités :</strong></p>
+            <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
+                <li>Création de sites web responsifs et performants</li>
+                <li>Gestion et sécurisation des systèmes et réseaux</li>
+                <li>Protection contre les cybermenaces</li>
+            </ul>
+            <p>N’hésitez pas à explorer mon portfolio et à me contacter pour toute collaboration ! 🚀</p>
+        </div>
     </div>
     <div class="container">
         <h2>Passionné de Cybersécurité</h2>
@@ -70,12 +131,27 @@
         <p>Je suis un étudiant passionné par l'informatique, avec une expertise croissante dans trois domaines clés : le développement web, l'administration système et réseau, et la cybersécurité. Actuellement, je termine ma 3ème année et je travaille en tant que <b>Cybersecurity Architecture Intern</b> chez <b>Axian Group</b>, où j'approfondis mes compétences en architecture de cybersécurité et en gestion des risques.</p>
         <h3>Mon Parcours</h3>
         <p>Au cours de mes études, j'ai acquis une solide compréhension des technologies web, des systèmes informatiques et des réseaux. Ma formation m’a permis de comprendre l'importance de la sécurité à tous les niveaux, ce qui m’a amené à me spécialiser en cybersécurité. Lors de mon stage chez Axian Group, j'ai eu l'opportunité de contribuer à des projets liés à l'architecture de sécurité, à la gestion des vulnérabilités et à l'implémentation de solutions de sécurité à grande échelle.</p>
-        <h3>Compétences clés</h3>
+        <h3>Compétences</h3>
         <ul>
-            <li>Développement Web</li>
-            <li>Administration Système et Réseau</li>
-            <li>Cybersécurité</li>
+            <li><strong>Développement Web :</strong> HTML, CSS, JavaScript, React, Node.js, PHP, MySQL</li>
+            <li><strong>Administration Système & Réseau :</strong> Linux, Windows Server, Docker, Virtualisation</li>
+            <li><strong>Cybersécurité :</strong> Pentesting, Sécurité des applications, SIEM, Analyse de logs</li>
         </ul>
+    </div>
+    <div class="container" id="contact">
+        <h2>Contactez-moi</h2>
+        <form action="submit.php" method="POST">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
     </div>
 </body>
 </html>
